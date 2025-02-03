@@ -1,0 +1,155 @@
+/* Reset básico de estilos, removendo margens e paddings para todos os elementos */
+* { 
+	margin: 0; /* Remove a margem padrão de todos os elementos */
+	padding: 0; /* Remove o padding padrão de todos os elementos */
+}
+
+/* Define box-sizing para todos os elementos e seus pseudo-elementos (:before e :after) */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box; /* Box-sizing para navegadores antigos baseados em WebKit */
+       -moz-box-sizing: border-box; /* Box-sizing para navegadores mais antigos como Firefox */
+            box-sizing: border-box; /* Define que o padding e a borda não influenciam no tamanho total */
+}
+
+/* Remove a sublinhado dos links e define a cor padrão */
+a {
+	text-decoration: none; /* Remove sublinhado */
+	color: #111; /* Define a cor preta para os links */
+}
+
+/* Define as propriedades gerais para o body (corpo da página) */
+body {
+	font-family: 'Open Sans', sans-serif; /* Fonte principal */
+	color: #fff; /* Cor do texto em branco */
+	background-color: #bf0302; /* Cor de fundo vermelha */
+	text-align: center; /* Alinha todo o conteúdo ao centro */
+}
+
+/* Define a cor dos textos em itálico (<em>) */
+em {
+	color: rgba(255,255,255,0.5); /* Cor branca semitransparente */
+}
+
+/* Estilos para o título principal (<h1>) */
+h1 {
+	text-align: center; /* Alinha o título ao centro */
+	padding: 20px 0; /* Espaçamento acima e abaixo */
+	font-weight: 300; /* Define uma espessura leve para o texto */
+}
+
+/* Estilo para o rodapé */
+footer {
+	position: fixed; /* Fixa o rodapé na parte inferior da página */
+	text-align: center; /* Centraliza o texto */
+	width: 100%; /* O rodapé ocupa toda a largura da tela */
+	bottom: 10px; /* Define 10px de espaçamento da parte inferior */
+	font-size: 20px; /* Tamanho do texto do rodapé */
+}
+
+/*---------------*/
+/* Estilos para a construção do BayMax */
+
+/* Define a estrutura geral do BayMax como um círculo */
+.baymax {
+	position: absolute; /* Posiciona o BayMax no centro da tela */
+	width: 500px; /* Define a largura */
+	height: 500px; /* Define a altura */
+	border-radius: 50%; /* Faz com que o BayMax tenha formato circular */
+	-webkit-border-radius: 50%; /* Versão para navegadores antigos */
+	-moz-border-radius: 50%; /* Versão para navegadores antigos */
+	-o-border-radius: 50%; /* Versão para navegadores antigos */
+	left: 50%; /* Centraliza horizontalmente */
+	margin-left: -250px; /* Move para o lado esquerdo para centralizar completamente */
+	top: 50%; /* Centraliza verticalmente */
+	margin-top: -250px; /* Move para cima para centralizar completamente */
+	-webkit-box-shadow: -20px 20px 20px rgba(0,0,0,0.2); /* Sombra com leve inclinação */
+	box-shadow: -20px 20px 20px rgba(0,0,0,0.2); /* Sombra para BayMax */
+	background: #fff; /* Fundo branco */
+	/* Gradiente aplicado ao fundo para dar uma leve profundidade */
+	background: -moz-linear-gradient(45deg, #bfbfbf 0%, #fefefe 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#bfbfbf), color-stop(100%,#fefefe));
+	background: -webkit-linear-gradient(45deg, #bfbfbf 0%, #fefefe 100%);
+	background: -ms-linear-gradient(45deg, #bfbfbf 0%, #fefefe 100%);
+	background: linear-gradient(45deg, #bfbfbf 0%, #fefefe 100%);
+	cursor: pointer; /* O cursor se transforma em uma mãozinha ao passar sobre o BayMax */
+}
+
+/* Adiciona um efeito de brilho no BayMax com um círculo transparente */
+.baymax:after {
+	content: ''; /* Conteúdo vazio */
+	width: 85%; /* Ligeiramente menor que o BayMax */
+	height: 85%; /* Ligeiramente menor que o BayMax */
+	background-color: rgba(255,255,255,0.15); /* Cor branca semitransparente */
+	position: absolute; /* Posiciona dentro do BayMax */
+	border-radius: 50%; /* Mantém o formato circular */
+	-webkit-border-radius: 50%; /* Versão para navegadores antigos */
+	-moz-border-radius: 50%; /* Versão para navegadores antigos */
+	-o-border-radius: 50%; /* Versão para navegadores antigos */
+	right: 10px; /* Posição à direita */
+	top: 10px; /* Posição no topo */
+}
+
+/* Estilos para os olhos do BayMax */
+.l-eye, .r-eye {
+	position: absolute; /* Posicionamento absoluto dentro do BayMax */
+	width: 80px; /* Largura dos olhos */
+	height: 80px; /* Altura dos olhos */
+	background-color: #111111; /* Cor preta para os olhos */
+	border-radius: 50%; /* Formato circular dos olhos */
+	-webkit-border-radius: 50%; /* Versão para navegadores antigos */
+	-moz-border-radius: 50%; /* Versão para navegadores antigos */
+	-o-border-radius: 50%; /* Versão para navegadores antigos */
+	top: 50%; /* Posiciona verticalmente no meio do BayMax */
+	z-index: 9; /* Os olhos ficam na frente de outros elementos */
+	-webkit-box-shadow: 0px 2px 0 rgba(255,255,255,0.7); /* Sombra clara para dar um efeito de profundidade */
+	box-shadow: 0px 2px 0 rgba(255,255,255,0.7); /* Sombra para os olhos */
+	overflow: hidden; /* Garante que o conteúdo não ultrapasse os olhos */
+}
+
+.l-eye {
+	left: 50px; /* Posiciona o olho esquerdo à esquerda */
+}
+
+.r-eye {
+	right: 50px; /* Posiciona o olho direito à direita */
+}
+
+/* Linha conectando os olhos */
+.line {
+	height: 10px; /* Altura da linha */
+	background-color: #111; /* Cor preta para a linha */
+	position: absolute; /* Posiciona dentro do BayMax */
+	top: 50%; /* Centraliza verticalmente */
+	margin-top: 40px; /* Ajusta a posição vertical */
+	width: 393px; /* Largura da linha conectando os olhos */
+	left: 55px; /* Alinha à esquerda */
+	z-index: 8; /* Fica atrás dos olhos */
+}
+
+/* Aplica uma transição suave aos elementos do BayMax ao passar o mouse */
+.baymax * {
+	transition: all 0.2s ease-in-out; /* Transição para todos os elementos */
+	-moz-transition: all 0.2s ease-in-out; /* Transição para Firefox */
+	-o-transition: all 0.2s ease-in-out; /* Transição para Opera */
+	-webkit-transition: all 0.2s ease-in-out; /* Transição para WebKit */
+}
+
+/* Fechar os olhos do BayMax quando o mouse passar por cima */
+.l-eye:before, .r-eye:before {
+	content: ''; /* Cria uma camada que fecha os olhos */
+	width: 100%; /* A largura cobre totalmente os olhos */
+	height: 50%; /* Cobre apenas a metade superior dos olhos */
+	left: 0; /* Alinha à esquerda */
+	position: absolute; /* Posiciona-se dentro dos olhos */
+	background-color: #bfbfbf; /* Cor semelhante ao corpo do BayMax */
+	top: -100%; /* Esconde a camada inicialmente acima dos olhos */
+	transition: all 0.6s ease-in-out; /* Transição suave para o efeito */
+	-moz-transition: all 0.6s ease-in-out; /* Transição para Firefox */
+	-o-transition: all 0.6s ease-in-out; /* Transição para Opera */
+	-webkit-transition: all 0.6s ease-in-out; /* Transição para WebKit */
+}
+
+/* Ao passar o mouse por cima do BayMax, a camada desce, fechando os olhos */
+.baymax:hover .l-eye:before, .baymax:hover .r-eye:before {
+	top: 0; /* A camada desce e "fecha" os olhos */
+}
