@@ -30,7 +30,7 @@ Com uma combinação de:
 
 ## 📜 Créditos
 
-Criado por **Paulo Amorim**. Se você quiser ver mais coisas legais (ou nem tanto), passe no meu [GitHub](https://github.com/Paulo88). Ah, não se esqueça de dar uma piscadinha de volta pro BayMax! 😜
+Re-criado por **Paulo Amorim**(eu) e alguns amigos apartir do video "Speed CSS3 - BayMax" do Daniel Snows, aqui o link do video (https://www.youtube.com/watch?v=B1_B5lH-CDw&ab_channel=DanielSnows). Se você quiser ver mais coisas legais (ou nem tanto), passe no meu [GitHub](https://github.com/Paulo88). Ah, não se esqueça de dar uma piscadinha de volta pro BayMax! 😜
 
 ---
 
